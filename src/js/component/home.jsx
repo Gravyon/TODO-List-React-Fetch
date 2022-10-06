@@ -43,7 +43,7 @@ const Home = () => {
 	<form className="container-fluid" onSubmit={handleSubmit} style={{width : "30rem", height: "30rem", float: "left"}}>
 	<div className="mb-3">
 		<label className="form-label mt-3"><h1>TODO</h1></label>
-		<input maxLength={"26"} onChange={(e) => setTarea(e.target.value)} value={tarea} placeholder="Anota tu tarea" type="text" className="form-control" id="tarea"/>
+		<input maxLength={"25"} onChange={(e) => setTarea(e.target.value)} value={tarea} placeholder="Anota tu tarea" type="text" className="form-control" id="tarea"/>
 	</div>
 	<button type="submit" onClick={handleClick} className="btn btn-primary">New Task</button>
 	<ul className="list-group mt-3">
