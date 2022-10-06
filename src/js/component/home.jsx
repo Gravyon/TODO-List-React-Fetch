@@ -47,11 +47,10 @@ const Home = () => {
 	</div>
 	<button type="submit" onClick={handleClick} className="btn btn-primary">New Task</button>
 	<ul className="list-group mt-3">
-	
 	{listaTareas.map((tarea, i) => 
-	<li onMouseEnter={handleButtonToggle} onMouseLeave={handleButtonToggle}  className="list-group-item list-group-item-light p-2" key={i}>
-		{buttonVisible && <button  type="button" onClick={() => handleRemoveTarea(i)}  class="btn-close" style={{float: "right"}}></button>}
-		<h3>{tarea}</h3></li>)}
+	<li className="tarea-none list-group-item list-group-item-light p-2" key={i}>
+	<button type="button" onClick={() => handleRemoveTarea(i)}  className="btn-close" style={{float: "right"}}></button>
+	<h3>{tarea}</h3></li>)}
 	<li className="list-group-item list-group-item-light d-inline-flex p-2">Tareas a hacer: {listaTareas.length}</li>
 	</ul>
 	</form>
@@ -59,5 +58,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
