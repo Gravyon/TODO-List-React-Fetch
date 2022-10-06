@@ -7,19 +7,11 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	const [tarea, setTarea]=useState("");
 	const [listaTareas, setListaTareas]=useState([]);
-	// const [stateHover, setHover]=useState(false)
-	const [buttonVisible, setButtonVisible] = useState(false)
 
-	const handleButtonToggle = () => {
-	  setButtonVisible(!buttonVisible)
-	}
 	const handleSubmit = (e) => { 
 		e.preventDefault()
 		setTarea("");
 	}
-
-	// console.log(tarea)
-
 	const handleClick = () => {
 
 		if (!tarea == "") {
@@ -31,7 +23,6 @@ const Home = () => {
 			)
 		}
 	}
-
 	const handleRemoveTarea = (id) => {
 		// console.log(id)
 		setListaTareas(listaTareas.filter((item,index)=>index !== id))
